@@ -1,0 +1,59 @@
+$break-phone: 400px
+$break-large: 1200px
+
+$page-width: 800px
+$small-page-width: 500px
+$header-width: 1000px
+
+$color-eggshell: #FAFAFA
+$color-lightgrey: #DDDDDD
+$color-link: #2323A5
+//$color-accent: #5cb85c
+//$color-accent-border: #4cae4c
+//$color-accent-hover: #449d44
+//$color-accent-hover-border: #398439
+$color-accent: #3939A0
+$color-accent-border: #191970
+$color-accent-hover: #292970
+$color-accent-hover-border: #191970
+$alpha-shadow: rgba(0, 0, 0, 0.2)
+
+$font-handwritten: 'Architects Daughter', cursive
+$font-standard: 'Open Sans', sans-serif
+
+@mixin bottom-shadow
+  -webkit-box-shadow: 0 3px 10px $alpha-shadow
+  -moz-box-shadow: 0 3px 10px $alpha-shadow
+  box-shadow: 0 3px 10px $alpha-shadow
+
+@mixin card
+  +bottom-shadow
+  background: white
+  border: 1px solid rgba(0, 0, 0, 0.1)
+
+@mixin page-card-mixin
+  +card
+  display: block
+  margin: 0 auto
+  padding: 20px
+  max-width: 400px
+
+@mixin small-page-card-mixin
+  +page-card-mixin
+  max-width: 400px
+
+@mixin normal-page-card-mixin
+  +page-card-mixin
+  max-width: 800px
+
+@mixin normal-page-flexbox-mixin
+  display: flex
+  margin: 0 auto
+  padding: 20px
+  max-width: 800px
+  justify-content: center
+
+@mixin error-box
+  padding: 20px
+  border: 1px solid rgba(255, 0, 0, 0.5)
+  background: rgba(255, 0, 0, 0.1)

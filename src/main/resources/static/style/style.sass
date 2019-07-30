@@ -1,0 +1,109 @@
+@import defines
+@import account
+@import books
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+a, a:visited, a:hover
+  font-weight: bold
+  text-decoration: none
+  color: $color-link
+
+input, button
+  border: 1px solid rgba(0, 0, 0, 0.2)
+
+button, .button
+  display: inline-block
+  background: $color-lightgrey
+  padding: 8px
+  border-radius: 3px
+  font-weight: normal
+
+  &:hover, &:visited, &:focus
+    font-weight: normal
+    cursor: pointer
+
+  &.accent
+    background: $color-accent
+    border-color: $color-accent-border
+    color: white
+    font-size: 18px
+    padding: 10px 16px
+
+    &:hover, &:focus
+      background: $color-accent-hover
+      border-color: $color-accent-hover-border
+
+input[type="submit"]
+  display: block
+  margin: 0 auto
+
+form
+  label, input[type="submit"], .g-recaptcha
+    font-size: 18px
+    margin: 10px auto 0 auto
+    display: block
+  .g-recaptcha
+    width: 304px
+    margin-top: 20px
+    margin-left: auto
+    margin-right: auto
+  input[type="text"], input[type="password"], input[type="submit"]
+    padding: 0 8px
+    height: 36px
+    line-height: 36px
+    font-size: 18px
+    display: block
+  input[type="text"], input[type="password"]
+    width: 100%
+  input[type="submit"]
+    background: $color-lightgrey
+    margin-top: 20px
+
+body
+  padding: 0
+  margin: 0
+  background: $color-eggshell
+  font-family: $font-standard
+
+header
+  +bottom-shadow
+  width: 100%
+  background: white
+
+  .wrapper
+    padding: 20px
+    max-width: $header-width
+    margin: 0 auto
+
+  h1, h1 a
+    font-family: $font-handwritten
+    color: black
+
+.small-wrapper, .normal-wrapper
+  margin: 20px auto 0 auto
+  padding: 20px
+  @media screen and (max-width: $break-phone)
+    padding: 10px !important
+
+.small-page-card
+  +small-page-card-mixin
+
+.normal-page-card
+  +normal-page-card-mixin
+
+.normal-page-flexbox
+  +normal-page-flexbox-mixin
+
+.center-container
+  display: block
+  text-align: center
+
+.center-block
+  display: block
+  margin: 0 auto

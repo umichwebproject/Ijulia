@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: H9Xho5pMtOTvcQ9N
+    url: jdbc:mysql://127.0.0.1:3306/ijulia?characterEncoding=utf-8&useSSL=false
+  jpa:
+      show-sql: true
+  thymeleaf:
+        servlet:
+          content-type: text/html
+  security:
+    basic:
+      enabled: false
